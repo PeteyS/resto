@@ -1,0 +1,108 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+@font-face{
+    font-family: 'Playfair';
+    src:url('PlayfairDisplay-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+#content{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4A460;
+    justify-content: center;
+    align-items: center;
+}
+.header,.menu,.home,.recipe,.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home{
+    background-color: #6E260E;
+}
+.header{
+    position: relative;
+    margin-top: 5px;
+    width: 97vw;
+    height: 14vh;
+    min-height: 100px;
+    background-color: rgb(139,69,19);
+    color: #483C32;
+    border: 10px solid #5C4033;
+    font-family: 'Playfair', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 70px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+.menu{
+    position: absolute;
+    top: 100px;
+    margin: 0 auto;
+    color: #E5AA70;
+    background-color: #5C4033;
+    border-left: 10px solid rgb(139,69,19);
+    border-right: 10px solid rgb(139,69,19);
+    border-bottom:10px solid rgb(139,69,19);;
+    width: 500px;
+    height: 100px;
+    justify-content: space-around;
+    font-size: 14px;
+    border-radius: 20px;
+    box-shadow: 0 6px 2px -2px #5C4033;
+}
+.buffer{
+    min-height: 30px;
+    height: 50px;
+}
+.home,.recipe,.contact{
+    height: 30px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.home:hover,.recipe:hover,.contact:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
+.home:active,.recipe:active,.contact:active{
+    transform: scale(0.99);
+}
+.mainPage,.recipePage,.contactPage{
+    flex: 1;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hours{
+    background-color: wheat;
+    margin-top: 20px;
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+}
+.blurb{
+    background-color: wheat;
+    height: 150px;
+    width: 700px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.mainPage:focus,.recipePage:focus,.contactPage:focus{
+    background-color: black;
+}
+
+@media only screen and (max-width:600px){
+    .menu{
+        width: 85%;
+    }
+}
