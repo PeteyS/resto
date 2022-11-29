@@ -1,7 +1,13 @@
 import './style.css';
 export default function contactPage(){
-    let element = document.createElement('div');
-    element.classList.add("contactPage");
+    let container = document.createElement('div');
+    container.classList.add("mainPage");
 
-    return element;
+    let hours = document.createElement('div');
+
+    hours.classList.add('hours');
+
+    container.appendChild(hours);
+
+    return container;
 }

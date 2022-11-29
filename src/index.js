@@ -13,7 +13,7 @@ let contact = document.createElement('div');
 let buffer = document.createElement('div');
 
 let currentPage = 'mainPage';
-let currentIndex = 1;
+let currentIndex = 1; //going to be used for animation
 
 header.textContent = 'Coffee';
 home.textContent = 'Home';
@@ -50,6 +50,8 @@ home.addEventListener('click', ()=>{
     if (currentPage != 'mainPage'){
         content.removeChild(content.lastChild);
         content.appendChild(mainPage());
+        header.textContent = 'Coffee';
+        header.appendChild(menu);
         currentPage = 'mainPage';
         changeColor(home,recipe,contact);
     }
@@ -58,6 +60,8 @@ recipe.addEventListener('click', ()=>{
     if(currentPage != 'recipePage'){
         content.removeChild(content.lastChild);
         content.appendChild(recipePage()); 
+        header.textContent = 'Recipes';
+        header.appendChild(menu);
         currentPage = 'recipePage';
         changeColor(recipe,home,contact);
     }
@@ -66,6 +70,8 @@ contact.addEventListener('click', ()=>{
     if(currentPage != 'contactPage'){
         content.removeChild(content.lastChild);
         content.appendChild(contactPage());
+        header.textContent = 'Contact';
+        header.appendChild(menu);
         currentPage = 'contactPage';
         changeColor(contact,recipe,home);
 

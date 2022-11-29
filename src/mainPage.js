@@ -7,6 +7,7 @@ export default function mainPage(){
     let hours = document.createElement('div');
     let hoursH2 = document.createElement('h2');
     hoursH2.textContent = 'Hours';
+    hoursH2.classList.add('hoursH2');
     hours.classList.add('hours');
 
     let hoursList = document.createElement('ul');

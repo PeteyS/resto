@@ -13,7 +13,7 @@ html,body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #F4A460;
+    background-color: #8d4d16;
     justify-content: center;
     align-items: center;
 }
@@ -31,8 +31,8 @@ html,body{
     width: 97vw;
     height: 14vh;
     min-height: 100px;
-    background-color: rgb(139,69,19);
-    color: #483C32;
+    background-color: rgb(131, 66, 20);
+    color: #2c251f;
     border: 10px solid #5C4033;
     font-family: 'Playfair', 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -83,20 +83,29 @@ html,body{
     align-items: center;
 }
 .hours{
-    background-color: wheat;
+    background-color: rgb(192, 138, 37);
+    border: 5px solid #5C4033;
     margin-top: 20px;
     height: 500px;
     width: 400px;
     border-radius: 20px;
+    line-height: 50px;
 }
-.blurb{
-    background-color: wheat;
+.blurb,.topBlurb{
+    background-color: rgb(192, 138, 37);
     height: 150px;
     width: 700px;
     margin-top: 20px;
     border-radius: 20px;
+    border: 5px solid #5C4033;
 }
-
+.topBlurb{
+    margin-top:20px;
+}
+.hoursH2{
+    text-align: center;
+    font-family: 'Playfair';
+}
 .mainPage:focus,.recipePage:focus,.contactPage:focus{
     background-color: black;
 }
