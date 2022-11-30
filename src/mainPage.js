@@ -1,4 +1,5 @@
 import './style.css';
+import Coffee from './coffeeSplash.png';
 
 export default function mainPage(){
     let container = document.createElement('div');

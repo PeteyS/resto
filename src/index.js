@@ -2,15 +2,20 @@ import './style.css';
 import mainPage from './mainPage';
 import recipePage from './recipePage';
 import contactPage from './contactPage';
+import CoffeeIcon from './coffee.png';
 
-let content  = document.getElementById('content');
+const content  = document.getElementById('content');
 
-let header = document.createElement('div');
-let menu = document.createElement('div');
-let home = document.createElement('div');
-let recipe = document.createElement('div');
-let contact = document.createElement('div');
-let buffer = document.createElement('div');
+const header = document.createElement('div');
+const menu = document.createElement('div');
+const home = document.createElement('div');
+const recipe = document.createElement('div');
+const contact = document.createElement('div');
+const buffer = document.createElement('div');
+
+const coffeeIcon = new Image();
+coffeeIcon.src = CoffeeIcon;
+coffeeIcon.classList.add('coffeeIcon');
 
 let currentPage = 'mainPage';
 let currentIndex = 1; //going to be used for animation
@@ -34,6 +39,7 @@ buffer.classList.add('buffer');
 menu.appendChild(home);
 menu.appendChild(recipe);
 menu.appendChild(contact);
+header.appendChild(coffeeIcon);
 
 header.appendChild(menu);
 content.appendChild(header);
@@ -52,6 +58,7 @@ home.addEventListener('click', ()=>{
         content.appendChild(mainPage());
         header.textContent = 'Coffee';
         header.appendChild(menu);
+        header.appendChild(coffeeIcon);
         currentPage = 'mainPage';
         changeColor(home,recipe,contact);
     }
@@ -62,6 +69,7 @@ recipe.addEventListener('click', ()=>{
         content.appendChild(recipePage()); 
         header.textContent = 'Recipes';
         header.appendChild(menu);
+        header.appendChild(coffeeIcon);
         currentPage = 'recipePage';
         changeColor(recipe,home,contact);
     }
@@ -72,6 +80,7 @@ contact.addEventListener('click', ()=>{
         content.appendChild(contactPage());
         header.textContent = 'Contact';
         header.appendChild(menu);
+        header.appendChild(coffeeIcon);
         currentPage = 'contactPage';
         changeColor(contact,recipe,home);
 
